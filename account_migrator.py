@@ -3,7 +3,7 @@ from configparser import ConfigParser
 
 from praw import Reddit
 
-CONFIG_PATH = f'{pathlib.Path(__file__).parent.absolute()}/config'
+CONFIG_PATH = '{}/config'.format(pathlib.Path(__file__).parent.absolute())
 
 
 class AccountMigrator(object):
@@ -19,7 +19,7 @@ class AccountMigrator(object):
     def _subcribe_to_subreddits(self, subreddit_list, new_account):
         reddit = Reddit(user_agent='Migrator', **new_account)
         for sub in subreddit_list:
-            print(f'Subscribing to {sub}')
+            print('Subscribing to {}'.format(sub))
             reddit.subreddit(sub).subscribe()
 
 
