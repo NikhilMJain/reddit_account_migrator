@@ -13,7 +13,7 @@ Automatically migrate/copy all your subscriptions from one Reddit account to ano
 > - redirect url: https://reddit.com
 
 - Copy the newly generated `client_secret` and `client_id`(the 14-character string that appears below "personal use script" on the page) 
-- Replace the dummy values in the `config` file with your own newly generated values.
+- Replace the dummy values in the `config` file with your own newly generated values. Ensure there is no space before or after the = sign
 - Repeat this for the new account as well.
 
 ## Installation
