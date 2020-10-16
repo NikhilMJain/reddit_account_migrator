@@ -14,7 +14,7 @@ class AccountMigrator(object):
     def _get_subcribed_subreddits_list(self, old_account):
         print('Fetching all subreddits...')
         reddit = Reddit(user_agent='Migrator', **old_account)
-        return [sub.display_name for sub in reddit.user.subreddits(limit=1)]
+        return [sub.display_name for sub in reddit.user.subreddits(limit=None)]
 
     def _subcribe_to_subreddits(self, subreddit_list, new_account):
         reddit = Reddit(user_agent='Migrator', **new_account)
